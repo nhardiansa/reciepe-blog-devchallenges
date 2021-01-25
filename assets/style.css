@@ -1,0 +1,359 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 95%;
+  margin: auto;
+}
+
+header {
+  margin-top: 32px;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+
+  margin-bottom: 15px;
+}
+
+header .description {
+  display: flex;
+  align-items: baseline;
+}
+
+header .description img {
+  margin-right: 12px;
+}
+
+header .description p {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4f4f4f;
+  width: 90%;
+}
+
+img.hero {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.cook-info .card .text h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.cook-info .card .text p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.cook-info .card span {
+  transform: scale(0.7);
+}
+
+.cook-info .yields span,
+.cook-info .yields p {
+  color: #f2994a;
+}
+
+.cook-info {
+  display: flex;
+  margin-bottom: 30.5px;
+}
+
+.cook-info .card {
+  display: flex;
+  align-items: center;
+}
+
+.ingredients {
+  margin-bottom: 30px;
+}
+
+.ingredients h2 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+
+  margin-bottom: 13px;
+}
+.ingredients .cracker h3,
+.ingredients .cheesecake h3 {
+  font-family: Playfair Display;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+  margin-bottom: 23px;
+}
+
+.ingredients .cheesecake h3 {
+  margin-top: 30 px;
+}
+
+.ingredients .cracker .step,
+.ingredients .cheesecake .step {
+  display: grid;
+  grid-template-columns: 21px auto;
+  grid-gap: 8px;
+  margin-bottom: 5px;
+}
+
+.ingredients .cracker .step label,
+.ingredients .cheesecake .step label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  color: #333333;
+
+  grid-column: 2;
+}
+
+.ingredients .cracker .step input,
+.ingredients .cheesecake .step input {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  grid-column: 1;
+}
+
+.instruction {
+  margin-bottom: 132px;
+}
+
+.instruction h2 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333333;
+
+  margin-bottom: 28px;
+}
+
+.instruction ol li {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+
+  width: 95%;
+  margin: auto;
+}
+
+.instruction ol {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 45px;
+  padding-right: 10px;
+}
+
+.instruction ol li {
+  counter-increment: step;
+  margin-bottom: 11px;
+  position: relative;
+}
+
+.instruction ol li:last-child {
+  margin-bottom: 26px;
+}
+
+.instruction ol li::before {
+  content: counter(step);
+
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffff;
+
+  position: absolute;
+  background: #f2994a;
+  border-radius: 20%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  left: -55px;
+}
+
+.instruction p {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  color: #bdbdbd;
+
+  width: 95%;
+  margin: auto;
+}
+
+.footer p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a9a9a9;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+@media only screen and (max-width: 576px) {
+  .cook-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .cook-info .yields {
+    grid-row: 1;
+  }
+
+  .cook-info .prep-time,
+  .cook-info .cook-time,
+  .cook-info .total-time {
+    grid-row: 2;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    width: 70%;
+  }
+
+  .cook-info .card {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 100px;
+  }
+
+  header,
+  .hero {
+    grid-column: 1 / span 2;
+  }
+
+  .cook-info {
+    grid-column: 2;
+  }
+
+  .instruction,
+  .ingredients {
+    grid-column: 1;
+  }
+
+  .footer {
+    grid-column: 1 / span 2;
+  }
+
+  header h1 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+
+  header .description p {
+    font-size: 14px;
+    line-height: 17px;
+    width: 58%;
+
+    margin-bottom: 17px;
+  }
+
+  .cook-info {
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 140px;
+    padding-top: 35px;
+    padding-left: 43px;
+
+    grid-column: 2;
+  }
+
+  .cook-info .card {
+    margin-bottom: 33px;
+  }
+
+  .ingredients {
+    margin-bottom: 28px;
+  }
+
+  .ingredients h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+
+  .ingredients .cracker {
+    margin-bottom: 38px;
+  }
+
+  .ingredients .cracker h3,
+  .ingredients .cheesecake h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .ingredients .cracker .step label,
+  .ingredients .cheesecake .step label {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .instruction ol {
+    padding-left: 25px;
+  }
+
+  .instruction ol li {
+    margin-bottom: 40px;
+  }
+
+  .instruction ol li::before {
+    left: -50px;
+  }
+
+  .instruction p {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .instruction p br {
+    display: none;
+  }
+}
