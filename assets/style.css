@@ -50,7 +50,7 @@ img.hero {
   margin-bottom: 24px;
 }
 
-.cook-info .card .text h3 {
+aside .card .text h3 {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -60,7 +60,7 @@ img.hero {
   color: #bdbdbd;
 }
 
-.cook-info .card .text p {
+aside .card .text p {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
@@ -68,21 +68,21 @@ img.hero {
   line-height: 12px;
 }
 
-.cook-info .card span {
+aside .card span {
   transform: scale(0.7);
 }
 
-.cook-info .yields span,
-.cook-info .yields p {
+aside .yields span,
+aside .yields p {
   color: #f2994a;
 }
 
-.cook-info {
+aside {
   display: flex;
   margin-bottom: 30.5px;
 }
 
-.cook-info .card {
+aside .card {
   display: flex;
   align-items: center;
 }
@@ -230,19 +230,19 @@ img.hero {
 }
 
 @media only screen and (max-width: 576px) {
-  .cook-info {
+  aside {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
   }
 
-  .cook-info .yields {
+  aside .yields {
     grid-row: 1;
   }
 
-  .cook-info .prep-time,
-  .cook-info .cook-time,
-  .cook-info .total-time {
+  aside .prep-time,
+  aside .cook-time,
+  aside .total-time {
     grid-row: 2;
   }
 }
@@ -252,34 +252,8 @@ img.hero {
     width: 70%;
   }
 
-  .cook-info .card {
+  aside .card {
     margin-right: 30px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  body {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    column-gap: 100px;
-  }
-
-  header,
-  .hero {
-    grid-column: 1 / span 2;
-  }
-
-  .cook-info {
-    grid-column: 2;
-  }
-
-  .instruction,
-  .ingredients {
-    grid-column: 1;
-  }
-
-  .footer {
-    grid-column: 1 / span 2;
   }
 
   header h1 {
@@ -295,18 +269,7 @@ img.hero {
     margin-bottom: 17px;
   }
 
-  .cook-info {
-    flex-direction: column;
-    border-radius: 12px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    width: 140px;
-    padding-top: 35px;
-    padding-left: 43px;
-
-    grid-column: 2;
-  }
-
-  .cook-info .card {
+  aside .card {
     margin-bottom: 33px;
   }
 
@@ -355,5 +318,39 @@ img.hero {
 
   .instruction p br {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(auto, 1fr);
+
+    column-gap: 110px;
+    row-gap: 0px;
+  }
+
+  .ingredients {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .instruction {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  aside {
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 140px;
+    height: 235px;
+    padding-top: 35px;
+    padding-left: 43px;
+
+    grid-column: 2;
+    grid-row: 1;
   }
 }
